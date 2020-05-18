@@ -28,7 +28,7 @@ namespace kleine_Kästchen
             InitializeComponent();
             
         }
-        private void Form1_RectangleGelb(KeyPressEventArgs e)
+        private void Form1_RectangleYellow(KeyPressEventArgs e)
         {
             
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Yellow);
@@ -38,11 +38,10 @@ namespace kleine_Kästchen
             k = h % 10;
             y = k * 20;
                        
-
-            formGraphics.FillRectangle(myBrush, new Rectangle(x, y, z, w));
+           formGraphics.FillRectangle(myBrush, new Rectangle(x, y, z, w));
           
         }
-        private void Form1_RectangleBlau(KeyPressEventArgs e)
+        private void Form1_RectangleBlue(KeyPressEventArgs e)
         {
            
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Blue);
@@ -62,29 +61,46 @@ namespace kleine_Kästchen
             if (e.KeyChar == (char)Keys.A)
             {
 
-                Form1_RectangleGelb(e);
-            }
-            else if (e.KeyChar == (char)Keys.B)
-            {
-
-                Form1_RectangleBlau(e);
-            }
+                Form1_RectangleYellow(e);
                 g += 1;
 
                 if (g == 10)
                 {
                     g = 0;
                     h++;
-                   
                 }
-            else if(e.KeyChar == (char)Keys.Back)
+            }
+            else if (e.KeyChar == (char)Keys.B)
             {
-                // ein Quadrat löchen
+
+                Form1_RectangleBlue(e);
+                g += 1;
+
+                if (g == 10)
+                {
+                    g = 0;
+                    h++;
+                }
+
+            }
+
+            else if (e.KeyChar == (char)Keys.Back)
+            {
+                // Ein Quadrat löchen
+                if (g > 0)
+                {
+                    --g;
+                }
+                else
+                {
+                    h--;
+                    g = 9;
+                    
+                }
             }
             else
             {
-                // do nothing          
-
+                // Do nothing;
             }
         }
     }
