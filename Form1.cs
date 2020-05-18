@@ -54,6 +54,19 @@ namespace kleine_Kästchen
             formGraphics.FillRectangle(myBrush, new Rectangle(x, y, z, w));
            
         }
+        private void Form1_RectangleWhite(KeyPressEventArgs e)
+        {
+
+            System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.White);
+            System.Drawing.Graphics formGraphics;
+            formGraphics = this.CreateGraphics();
+            x = g * 20;
+            k = h % 10;
+            y = k * 20;
+
+            formGraphics.FillRectangle(myBrush, new Rectangle(x, y, z, w));
+
+        }
 
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -90,12 +103,16 @@ namespace kleine_Kästchen
                 if (g > 0)
                 {
                     --g;
+                    Form1_RectangleWhite(e);
+
                 }
                 else
                 {
                     h--;
                     g = 9;
-                    
+                    Form1_RectangleWhite(e);
+
+
                 }
             }
             else
