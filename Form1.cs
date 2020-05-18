@@ -18,9 +18,10 @@ namespace kleine_Kästchen
         int k ;
         int x ;
         int y ;
-        int z=20 ;
-        int w=20 ;
+        int z=40 ;
+        int w=40 ;
         int h ;
+        
 
 
         public Form1()
@@ -34,9 +35,9 @@ namespace kleine_Kästchen
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Yellow);
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
-            x = g * 20;
+            x = g * 40;
             k = h % 10;
-            y = k * 20;
+            y = k * 40;
                        
            formGraphics.FillRectangle(myBrush, new Rectangle(x, y, z, w));
           
@@ -47,9 +48,9 @@ namespace kleine_Kästchen
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.Blue);
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
-            x = g * 20;
+            x = g * 40;
             k = h % 10;
-            y = k * 20;
+            y = k * 40;
 
             formGraphics.FillRectangle(myBrush, new Rectangle(x, y, z, w));
            
@@ -60,9 +61,9 @@ namespace kleine_Kästchen
             System.Drawing.SolidBrush myBrush = new System.Drawing.SolidBrush(System.Drawing.Color.White);
             System.Drawing.Graphics formGraphics;
             formGraphics = this.CreateGraphics();
-            x = g * 20;
+            x = g * 40;
             k = h % 10;
-            y = k * 20;
+            y = k * 40;
 
             formGraphics.FillRectangle(myBrush, new Rectangle(x, y, z, w));
 
