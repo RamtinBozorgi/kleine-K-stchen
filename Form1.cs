@@ -72,7 +72,7 @@ namespace kleine_Kästchen
         private void Form1_KeyPress(object sender, KeyPressEventArgs e)
         {
 
-            if (e.KeyChar == (char)Keys.A)
+            if (e.KeyChar == 'a' || e.KeyChar == 'A')
             {
 
                 Form1_RectangleYellow(e);
@@ -84,7 +84,7 @@ namespace kleine_Kästchen
                     h++;
                 }
             }
-            else if (e.KeyChar == (char)Keys.B)
+            else if (e.KeyChar == 'b' || e.KeyChar == 'B')
             {
 
                 Form1_RectangleBlue(e);
